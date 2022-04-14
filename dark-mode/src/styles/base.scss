@@ -1,0 +1,41 @@
+* {
+    width: 100%;
+    margin: 0;
+
+    transition: background-color ease 1s;
+    transition: color ease 1s;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.app.light {
+    background-color: white;
+
+    .header {
+        color: #F0A500;
+
+    }
+
+    .text {
+        color: #180A0A;
+    }
+}
+
+.app.dark {
+    background-color: #191919;
+
+    .header {
+        color: #F68989;
+    }
+
+    .text {
+        color: #EEEEEE;
+    }
+
+    transition: all ease 1s;
+}
+
