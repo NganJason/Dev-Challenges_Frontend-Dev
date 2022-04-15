@@ -1,0 +1,13 @@
+.App {
+    height: 100%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+header {
+    min-height: 3rem;
+}

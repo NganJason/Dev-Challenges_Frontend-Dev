@@ -1,0 +1,65 @@
+@mixin ease-transition {
+    transition: background-color ease-in-out 1s;
+    -webkit-transition: background-color ease-in-out 1s;
+    -o-transition: background-color ease-in-out 1s;
+    -moz-transition: background-color ease-in-out 1s;
+}
+
+.App {
+    @include ease-transition;
+
+    .input-text {
+        @include ease-transition;
+        color: #333333
+    }
+    
+    .input-placeholder {
+        @include ease-transition;
+        color: #BDBDBD;
+    }
+
+    .mode-icon {
+        @include ease-transition;
+        color: #333333;
+    }
+
+    .box {
+        @include ease-transition;
+        background-color: #FFFFFF;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .right-border {
+        @include ease-transition;
+        border-right: 1px solid #F2F2F2;
+    }
+
+    .material-icons.default { color: #EB5757; }
+}
+
+.App.dark {
+    background-color:#181a1b;
+
+    .input-text {
+        color: #FFFFFF;
+    }
+
+    .input-placeholder {
+        color: white;
+    }
+
+    .mode-icon {
+        color: #FFC107;
+    }
+
+    .box {
+        background-color: #212121;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .right-border {
+        border-right: 1px solid hsla(36,10%,50%,.06);
+    }
+
+    .material-icons.default { color: #bdbdbd; }
+}

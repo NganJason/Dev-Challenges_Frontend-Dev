@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import "./styles/main.scss";
+
+import Nav from "./components/Nav/Nav";
 
 function App() {
+  const [theme, setTheme] = useState("light")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className={`App ${theme === "dark" ? "dark" : ""}`}>
+      <header>
+        <Nav theme={theme} setTheme={setTheme}/>
       </header>
+      <main></main>
+      <footer></footer>
     </div>
   );
 }
