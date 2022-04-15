@@ -2,8 +2,10 @@
     width: 100%;
     margin: 0;
 
-    transition: background-color ease 1s;
-    transition: color ease 1s;
+    transition: background-color ease-in-out 1s;
+    -webkit-transition: background-color ease-in-out 1s;
+    -o-transition: background-color ease-in-out 1s;
+    -moz-transition: background-color ease-in-out 1s;
 }
 
 .app {
@@ -35,7 +37,5 @@
     .text {
         color: #EEEEEE;
     }
-
-    transition: all ease 1s;
 }
 

@@ -1,0 +1,60 @@
+.nav {
+    display: flex;
+}
+
+.nav__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__bar img {
+    width: 100px;
+}
+
+.nav__bar * {
+    cursor: pointer;
+}
+
+.nav__search {
+    width: 23rem;
+    height: 3rem;
+    margin-left: 1rem;
+
+    display: flex;
+
+    border-radius: 16px;
+}
+
+.nav__search * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.search__location {
+    flex: 3;
+}
+
+.search__guests {
+    flex: 3;
+}
+
+.search__btn {
+    margin: auto;
+    flex: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav__search {
+        width: 90%;
+        margin: 2rem auto;
+        
+    }
+}
