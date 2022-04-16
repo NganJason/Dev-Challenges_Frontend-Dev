@@ -1,13 +1,26 @@
 .App {
     height: 100%;
-    padding: 2rem;
+    padding: 0 6rem;
 
     display: flex;
     flex-direction: column;
 
     position: relative;
+
+    overflow: auto;
+    scroll-behavior: smooth;
 }
 
 header {
-    min-height: 3rem;
+    margin-top: 2rem;
+}
+
+main {
+    margin-top: 3rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .App {
+    padding: 0 2rem;
+  }
 }
