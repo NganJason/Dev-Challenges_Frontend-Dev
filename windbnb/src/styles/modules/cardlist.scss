@@ -1,0 +1,27 @@
+.cardlist__header {
+    display: flex;
+}
+
+.cardlist__header p {
+    text-align: right;
+}
+
+.cardlist {
+    margin: 3rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .cardlist {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+    .cardlist {
+        grid-gap: 2rem 2rem;
+    }
+}

@@ -1,8 +1,8 @@
 @mixin ease-transition {
-    transition: background-color ease-in-out 1s;
-    -webkit-transition: background-color ease-in-out 1s;
-    -o-transition: background-color ease-in-out 1s;
-    -moz-transition: background-color ease-in-out 1s;
+    transition: background-color ease-in-out 0.3s;
+    -webkit-transition: background-color ease-in-out 0.3s;
+    -o-transition: background-color ease-in-out 0.3s;
+    -moz-transition: background-color ease-in-out 0.3s;
 }
 
 .App {
@@ -34,6 +34,31 @@
         border-right: 1px solid #F2F2F2;
     }
 
+    // Card List
+    .cardlist__header h1 {
+        color: #333333;
+    }
+
+    .cardlist__header p {
+        color: #4F4F4F;
+    }
+
+    .card__name {
+        color: #333333;
+    }
+
+    .tag__super-host {
+        border: 1px solid #4F4F4F;
+    }
+
+    .tag__info {
+        color: #828282;
+    }
+
+    .rating__text {
+        color: #4F4F4F;
+    }
+
     .material-icons.default { color: #EB5757; }
 }
 
@@ -62,4 +87,34 @@
     }
 
     .material-icons.default { color: #bdbdbd; }
+
+    // Card List
+    .cardlist__header h1 {
+        color: #FFFFFF;
+    }
+
+    .cardlist__header p {
+        color: #FFFFFF;
+    }
+
+    .card__name {
+        color: #FFFFFF;
+    }
+
+    .tag__super-host {
+        color: #9E9E9E;
+        border: 1px solid #9E9E9E;
+    }
+
+    .tag__info {
+        color: #9E9E9E;
+    }
+
+    .rating__text {
+        color: #9E9E9E;
+    }
+
+    .material-icons.rating__star {
+        color: #FFC107;
+    }
 }
