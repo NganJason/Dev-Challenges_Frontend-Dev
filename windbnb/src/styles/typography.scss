@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish:wght@400;800&family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Mulish:wght@400;500;600;700;800&family=Poppins:wght@700&display=swap');
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -6,45 +6,26 @@
     line-height: 1.25rem;
 }
 
-.input__text, .input__placeholder {
+.mulish {
     font-family: 'Mulish';
-    font-size: 0.9rem;
-    font-weight: 400;
 }
 
-.cardlist__header h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
+// Font-size
+h1 { font-size: 1.5rem; }
+h3 { font-size: 0.9rem; }
+h4 { font-size: 0.8rem; }
+h5 { font-size: 0.7rem; }
+h6 { font-size: 0.6rem; }
+p { font-size: 1rem; }
 
-.cardlist__header p {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
+// Font-weight
+.bd-800 { font-weight: 800; }
+.bd-700 { font-weight: 700; }
+.bd-600 { font-weight: 600; }
+.bd-500 { font-weight: 500; }
+.bd-400 { font-weight: 400; }
 
-.card__name {
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.tag__info {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.tag__super-host {
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.rating__text {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.input__label {
-    font-family: 'Mulish';
-    font-size: 0.6rem;
-    font-weight: 800;
-    text-transform: uppercase;
-}
+// Text Align
+.txt-left { text-align: left; }
+.txt-right { text-align: right; }
+.txt-center { text-align: center; }

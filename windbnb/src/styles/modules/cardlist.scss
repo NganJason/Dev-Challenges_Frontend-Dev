@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.cardlist__header p {
+.cardlist__header h3 {
     text-align: right;
 }
 
@@ -11,7 +11,7 @@
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem 5rem;
+    gap: 2rem 6rem;
 }
 
 @media only screen and (max-width: 1000px) {

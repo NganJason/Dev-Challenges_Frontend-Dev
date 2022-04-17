@@ -11,135 +11,99 @@
 
 .App {
     @include ease-transition;
+    background-color: #FFFFFF;
 
-    // Input
-    .input__text {
-        color: #333333
-    }
-    
-    .input__placeholder {
-        color: #BDBDBD;
-    }
+    // Background
+    .bg-primary { background-color: #FFFFFF; }
+    .bg-secondary { background-color: rgba(79, 79, 79, 0.6); }
 
-    .mode-icon {
-        color: #333333;
-    }
+    // Icons
+    .material-icons.default { color: #EB5757; }
+    .material-icons.primary { color: #333333; }
+    .material-icons.secondary { color: white; }
+    .material-icons.tertiary { color: #4F4F4F; }
 
+    // Fonts
+    h1 { color: #333333; }
+
+    h3 { color: #333333; }
+    h3.primary { color: #4F4F4F; }
+    h3.secondary { color: #828282; }
+    h3.tertiary { color: white; }
+    h3.light { color: #BDBDBD; }
+
+    h4 { color: #4F4F4F; }
+
+    h6 { color: #333333; }
+
+    p { color: #333333; }
+
+    // Buttons
+    button.primary { background: #EB5757; }
+    button.secondary { background: white; color: #828282; }
+
+    // Shame
     .border-right {
-        border-right: 2px solid #F2F2F2;
+        border-right: 1px solid hsla(36,10%,50%,0.15);
     }
 
-    // Card List
-    .cardlist__header h1 {
-        color: #333333;
+    .tag__super-host {
+        border: 1px solid #9E9E9E;
     }
 
-    .cardlist__header p {
-        color: #4F4F4F;
+    .box {
+        background-color: #FFFFFF;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
     }
 
-    .card__name {
-        color: #333333;
+    .guests__btn button {
+        border: 1px solid #828282;
+    }
+}
+
+.App.dark {
+    background-color:#181a1b;
+
+    // Background
+    .bg-primary { background-color:#181a1b; }
+    .bg-secondary { background-color: rgba(79, 79, 79, 0.6); }
+    
+
+    // Icons
+    .material-icons.default { color: #bdbdbd; }
+    .material-icons.primary { color: #FFC107; }
+    .material-icons.secondary { color: white; }
+    .material-icons.tertiary { color: #bdbdbd; }
+
+    // Fonts
+    h1 { color: #FFFFFF; }
+
+    h3 { color: #FFFFFF; }
+    h3.primary { color: #FFFFFF; }
+    h3.secondary { color: #9E9E9E; }
+    h3.light { color: #FFFFFF; }
+
+    h4 { color: #9E9E9E; }
+
+    h6 { color: #FFFFFF; }
+
+    p { color: #FFFFFF; }
+
+    // Buttons
+    button.primary { background: #EB5757; }
+    button.secondary { background: #212121; color: #bdbdbd; }
+
+    // Shame
+    .border-right {
+        border-right: 1px solid hsla(36,10%,50%,0.5);
     }
 
     .tag__super-host {
         border: 1px solid #4F4F4F;
     }
 
-    .tag__info {
-        color: #828282;
-    }
-
-    .rating__text {
-        color: #4F4F4F;
-    }
-
-    // Modal
-    .modal {
-        background-color: rgba(79, 79, 79, 0.6);
-    }
-
-    .modal__form {
-        background-color: #FFFFFF;
-    }
-    
-    .modal__search-btn button {
-        background: #EB5757;
-        color: white;
-    }
-
-    // Common
-    .box {
-        background-color: #FFFFFF;
-        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    // Icons
-    .material-icons.default { color: #EB5757; }
-}
-
-.App.dark {
-    background-color:#181a1b;
-
-    // Input
-    .input__text {
-        color: #FFFFFF;
-    }
-
-    .input-placeholder {
-        color: white;
-    }
-
-    .mode-icon {
-        color: #FFC107;
-    }
-
-    .border-right {
-        border-right: 1px solid hsla(36,10%,50%,.06);
-    }
-
-    // Card List
-    .cardlist__header h1 {
-        color: #FFFFFF;
-    }
-
-    .cardlist__header p {
-        color: #FFFFFF;
-    }
-
-    .card__name {
-        color: #FFFFFF;
-    }
-
-    .tag__super-host {
-        color: #9E9E9E;
-        border: 1px solid #9E9E9E;
-    }
-
-    .tag__info {
-        color: #9E9E9E;
-    }
-
-    .rating__text {
-        color: #9E9E9E;
-    }
-
-    // Modal
-    .modal__search-btn button {
-        background: #EB5757;
-        color: white;
-    }
-
-    // Common
     .box {
         background-color: #212121;
         box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    // Icons
-    .material-icons.default { color: #bdbdbd; }
-
-    .material-icons.rating__star {
-        color: #FFC107;
     }
 }

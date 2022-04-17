@@ -7,15 +7,20 @@ import Modal from "./components/Modal/Modal";
 
 function App() {
   const [theme, setTheme] = useState("light")
+  const [modalOn, setModal] = useState(false)
+
+  const toggleModal = () => {
+    setModal(!modalOn)
+  }
 
   return (
-    <div className={`App ${theme === "dark" ? "dark" : ""}`}>
+    <div className={`App ${theme === "dark" ? "dark" : ""} bg-primary`}>
       <header>
-        <Nav theme={theme} setTheme={setTheme}/>
+        <Nav theme={theme} setTheme={setTheme} toggleModal={toggleModal} />
       </header>
       <main>
-        <CardList/>
-        <Modal/>
+        <CardList />
+        {modalOn ? <Modal toggleModal={toggleModal} /> : ""}
       </main>
       <footer></footer>
     </div>
