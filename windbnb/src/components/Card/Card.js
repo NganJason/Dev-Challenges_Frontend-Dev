@@ -16,7 +16,7 @@ function Card() {
           <h3 className="bd-500 secondary">Entire apartment . 2 beds</h3>
 
           <div className="tag__rating">
-            <span class="material-icons md-24 default">star</span>
+            <span className="material-icons md-24 default">star</span>
             <h3 className="bd-500 primary">4.40</h3>
           </div>
         </div>

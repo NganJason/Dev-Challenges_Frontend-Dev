@@ -11,7 +11,7 @@ function Nav({ theme, setTheme, toggleModal }) {
       <div className="nav__bar">
         <img src={logo} alt="logo" />
         <span
-          class="material-icons md-24 hover-lg primary"
+          className="material-icons md-24 hover-lg primary"
           onClick={toggleTheme}
         >
           {theme === "dark" ? "light_mode" : "dark_mode"}
@@ -31,7 +31,7 @@ function Nav({ theme, setTheme, toggleModal }) {
         >
           <h3 className="bd-400 mulish light">Add guests</h3>
         </div>
-        <span class="search__btn material-icons md-24 default hover-lg">
+        <span className="search__btn material-icons md-24 default hover-lg">
           search
         </span>
       </div>

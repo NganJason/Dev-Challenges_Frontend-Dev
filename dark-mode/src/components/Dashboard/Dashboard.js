@@ -9,7 +9,7 @@ function Dashboard({theme, toggleTheme}) {
     return (
       <div className="dashboard">
         <span 
-            class="material-icons header"
+            className="material-icons header"
             onClick={toggleTheme}
         >
             {mode[theme]}
