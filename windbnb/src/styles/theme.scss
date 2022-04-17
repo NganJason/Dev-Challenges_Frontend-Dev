@@ -5,33 +5,28 @@
     -moz-transition: background-color ease-in-out 0.3s;
 }
 
+.App * {
+    @include ease-transition;
+}
+
 .App {
     @include ease-transition;
 
-    .input-text {
-        @include ease-transition;
+    // Input
+    .input__text {
         color: #333333
     }
     
-    .input-placeholder {
-        @include ease-transition;
+    .input__placeholder {
         color: #BDBDBD;
     }
 
     .mode-icon {
-        @include ease-transition;
         color: #333333;
     }
 
-    .box {
-        @include ease-transition;
-        background-color: #FFFFFF;
-        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .right-border {
-        @include ease-transition;
-        border-right: 1px solid #F2F2F2;
+    .border-right {
+        border-right: 2px solid #F2F2F2;
     }
 
     // Card List
@@ -59,13 +54,35 @@
         color: #4F4F4F;
     }
 
+    // Modal
+    .modal {
+        background-color: rgba(79, 79, 79, 0.6);
+    }
+
+    .modal__form {
+        background-color: #FFFFFF;
+    }
+    
+    .modal__search-btn button {
+        background: #EB5757;
+        color: white;
+    }
+
+    // Common
+    .box {
+        background-color: #FFFFFF;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    // Icons
     .material-icons.default { color: #EB5757; }
 }
 
 .App.dark {
     background-color:#181a1b;
 
-    .input-text {
+    // Input
+    .input__text {
         color: #FFFFFF;
     }
 
@@ -77,16 +94,9 @@
         color: #FFC107;
     }
 
-    .box {
-        background-color: #212121;
-        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .right-border {
+    .border-right {
         border-right: 1px solid hsla(36,10%,50%,.06);
     }
-
-    .material-icons.default { color: #bdbdbd; }
 
     // Card List
     .cardlist__header h1 {
@@ -113,6 +123,21 @@
     .rating__text {
         color: #9E9E9E;
     }
+
+    // Modal
+    .modal__search-btn button {
+        background: #EB5757;
+        color: white;
+    }
+
+    // Common
+    .box {
+        background-color: #212121;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    // Icons
+    .material-icons.default { color: #bdbdbd; }
 
     .material-icons.rating__star {
         color: #FFC107;

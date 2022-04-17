@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish&family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Mulish:wght@400;800&family=Poppins:wght@700&display=swap');
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -6,9 +6,9 @@
     line-height: 1.25rem;
 }
 
-.input-text, .input-placeholder {
+.input__text, .input__placeholder {
     font-family: 'Mulish';
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 400;
 }
 
@@ -40,4 +40,11 @@
 .rating__text {
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+.input__label {
+    font-family: 'Mulish';
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }

@@ -1,0 +1,64 @@
+.modal {
+    height: 100%;
+    width: 100%;;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.modal__form {
+    min-height: 460px;
+    padding: 4rem 4rem 2rem 4rem;
+}
+
+.modal__input {
+    max-width: 1200px;
+    height: 4rem;
+    margin: auto;
+
+    display: flex;
+
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.modal__input .input__item {
+    padding-left: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 3;
+
+    cursor: pointer;
+}
+
+.modal__input div:hover {
+    transform: scale(1.01);
+}
+
+.modal__input .modal__search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.modal__search-btn button{
+    width: 8rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.modal__search-btn p {
+    width: auto;
+}

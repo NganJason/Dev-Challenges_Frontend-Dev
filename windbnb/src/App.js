@@ -3,6 +3,7 @@ import "./styles/main.scss";
 
 import Nav from "./components/Nav/Nav";
 import CardList from "./components/CardList/CardList"
+import Modal from "./components/Modal/Modal";
 
 function App() {
   const [theme, setTheme] = useState("light")
@@ -14,6 +15,7 @@ function App() {
       </header>
       <main>
         <CardList/>
+        <Modal/>
       </main>
       <footer></footer>
     </div>

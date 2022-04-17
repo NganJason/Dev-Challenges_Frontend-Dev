@@ -19,11 +19,11 @@ function Nav({theme, setTheme}) {
         </div>
 
         <div className="nav__search box">
-          <div className="search__location right-border hover-lg">
-            <p className="input-text">Helsinki, Finland</p>
+          <div className="search__location border-right hover-lg">
+            <p className="input__text">Helsinki, Finland</p>
           </div>
-          <div className="search__guests right-border hover-lg">
-            <p className="input-placeholder">Add guests</p>
+          <div className="search__guests border-right hover-lg">
+            <p className="input__placeholder">Add guests</p>
           </div>
           <span class="search__btn material-icons md-18 default hover-lg">
             search
