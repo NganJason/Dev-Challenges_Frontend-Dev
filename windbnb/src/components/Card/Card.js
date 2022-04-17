@@ -10,18 +10,20 @@ function Card() {
 
         <div className="card__tag-list">
           <div className="tag__super-host box">
-            SUPER HOST
+            <h4 className="bd-700 txt-center">SUPER HOST</h4>
           </div>
 
-          <p className="tag__info">Entire apartment . 2 beds</p>
+          <h3 className="bd-500 secondary">Entire apartment . 2 beds</h3>
 
           <div className="tag__rating">
-            <span class="material-icons md-18 default rating__star">star</span>
-            <p className="rating__text">4.40</p>
+            <span class="material-icons md-24 default">star</span>
+            <h3 className="bd-500 primary">4.40</h3>
           </div>
         </div>
 
-        <h3 className="card__name">Stylist apartment in center of the city</h3>
+        <p className="card__name bd-600">
+          Stylist apartment in center of the city
+        </p>
       </div>
     );
 }

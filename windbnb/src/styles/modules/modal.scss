@@ -1,0 +1,149 @@
+.modal {
+    height: 100%;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.modal__form {
+    min-height: 460px;
+    padding: 3rem 2rem;
+
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+
+    border-radius: 16px;
+}
+
+.container .input {
+    padding-left: 1.5rem;
+
+    position: relative;
+}
+
+.input__field {
+    height: 4rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.input__field:hover {
+    transform: scale(1.01);
+}
+
+.modal__search-btn{
+    width: 8rem;
+    height: 3rem;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.modal__search-btn:hover {
+    transform: scale(1.01);
+}
+
+.modal__search-btn h3 {
+    width: auto;
+}
+
+// Input dropdown
+.input__drop-down {
+    position: absolute;
+    top: 4rem;
+}
+
+// Location selection
+.selection__location > div {
+    margin-top: 1.5rem;
+
+    display: flex;
+}
+
+.selection__location .material-icons {
+    margin-right: 0.5rem;
+}
+
+// Guest selection
+.selection__guests {
+    display: flex;
+    flex-direction: column;
+}
+
+.selection__guests > div {
+    margin-top: 1.5rem;
+}
+
+.guests__btn {
+    display: flex;
+    margin-top: 0.7rem;
+}
+
+.guests__btn h3 {
+    width: 2rem;
+}
+.guests__btn button {
+    width: 23px;
+    height: 23px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 4px;
+}
+
+.guests__btn button:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .input.border-right {
+        border: none !important;
+    }
+
+    .input__field.guests  {
+        border-top: 1px solid hsla(36,10%,50%,0.15);
+    }
+
+    .input__drop-down {
+        position: absolute;
+        top: 4rem;
+    }
+
+    .selection__location {
+        top: 7rem;
+    }
+
+    .modal__search-btn {
+        position: absolute;
+        bottom: 2rem;
+        left: 40%;
+    }
+}

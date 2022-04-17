@@ -5,116 +5,105 @@
     -moz-transition: background-color ease-in-out 0.3s;
 }
 
+.App * {
+    @include ease-transition;
+}
+
 .App {
     @include ease-transition;
+    background-color: #FFFFFF;
 
-    .input-text {
-        @include ease-transition;
-        color: #333333
-    }
-    
-    .input-placeholder {
-        @include ease-transition;
-        color: #BDBDBD;
+    // Background
+    .bg-primary { background-color: #FFFFFF; }
+    .bg-secondary { background-color: rgba(79, 79, 79, 0.6); }
+
+    // Icons
+    .material-icons.default { color: #EB5757; }
+    .material-icons.primary { color: #333333; }
+    .material-icons.secondary { color: white; }
+    .material-icons.tertiary { color: #4F4F4F; }
+
+    // Fonts
+    h1 { color: #333333; }
+
+    h3 { color: #333333; }
+    h3.primary { color: #4F4F4F; }
+    h3.secondary { color: #828282; }
+    h3.tertiary { color: white; }
+    h3.light { color: #BDBDBD; }
+
+    h4 { color: #4F4F4F; }
+
+    h6 { color: #333333; }
+
+    p { color: #333333; }
+
+    // Buttons
+    button.primary { background: #EB5757; }
+    button.secondary { background: white; color: #828282; }
+
+    // Shame
+    .border-right {
+        border-right: 1px solid hsla(36,10%,50%,0.15);
     }
 
-    .mode-icon {
-        @include ease-transition;
-        color: #333333;
+    .tag__super-host {
+        border: 1px solid #9E9E9E;
     }
 
     .box {
-        @include ease-transition;
         background-color: #FFFFFF;
-        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
     }
 
-    .right-border {
-        @include ease-transition;
-        border-right: 1px solid #F2F2F2;
+    .guests__btn button {
+        border: 1px solid #828282;
     }
+}
 
-    // Card List
-    .cardlist__header h1 {
-        color: #333333;
-    }
+.App.dark {
+    background-color:#181a1b;
 
-    .cardlist__header p {
-        color: #4F4F4F;
-    }
+    // Background
+    .bg-primary { background-color:#181a1b; }
+    .bg-secondary { background-color: rgba(79, 79, 79, 0.6); }
+    
 
-    .card__name {
-        color: #333333;
+    // Icons
+    .material-icons.default { color: #bdbdbd; }
+    .material-icons.primary { color: #FFC107; }
+    .material-icons.secondary { color: white; }
+    .material-icons.tertiary { color: #bdbdbd; }
+
+    // Fonts
+    h1 { color: #FFFFFF; }
+
+    h3 { color: #FFFFFF; }
+    h3.primary { color: #FFFFFF; }
+    h3.secondary { color: #9E9E9E; }
+    h3.light { color: #FFFFFF; }
+
+    h4 { color: #9E9E9E; }
+
+    h6 { color: #FFFFFF; }
+
+    p { color: #FFFFFF; }
+
+    // Buttons
+    button.primary { background: #EB5757; }
+    button.secondary { background: #212121; color: #bdbdbd; }
+
+    // Shame
+    .border-right {
+        border-right: 1px solid hsla(36,10%,50%,0.5);
     }
 
     .tag__super-host {
         border: 1px solid #4F4F4F;
     }
 
-    .tag__info {
-        color: #828282;
-    }
-
-    .rating__text {
-        color: #4F4F4F;
-    }
-
-    .material-icons.default { color: #EB5757; }
-}
-
-.App.dark {
-    background-color:#181a1b;
-
-    .input-text {
-        color: #FFFFFF;
-    }
-
-    .input-placeholder {
-        color: white;
-    }
-
-    .mode-icon {
-        color: #FFC107;
-    }
-
     .box {
         background-color: #212121;
         box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .right-border {
-        border-right: 1px solid hsla(36,10%,50%,.06);
-    }
-
-    .material-icons.default { color: #bdbdbd; }
-
-    // Card List
-    .cardlist__header h1 {
-        color: #FFFFFF;
-    }
-
-    .cardlist__header p {
-        color: #FFFFFF;
-    }
-
-    .card__name {
-        color: #FFFFFF;
-    }
-
-    .tag__super-host {
-        color: #9E9E9E;
-        border: 1px solid #9E9E9E;
-    }
-
-    .tag__info {
-        color: #9E9E9E;
-    }
-
-    .rating__text {
-        color: #9E9E9E;
-    }
-
-    .material-icons.rating__star {
-        color: #FFC107;
     }
 }
