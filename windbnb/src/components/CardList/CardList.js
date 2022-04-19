@@ -10,8 +10,8 @@ function CardList({data}) {
           <h3 className="bd-500 primary">{`${data.length} stays`}</h3>
         </div>
         <div className="cardlist">
-        {data.map((info, i) => {
-          return <Card stayInfo={info} />;
+        {data.map((info) => {
+          return <Card key={info.title} stayInfo={info} />;
         })}
           
         </div>

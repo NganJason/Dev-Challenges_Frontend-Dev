@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 
 function Modal({
   toggleModal,
@@ -9,6 +9,8 @@ function Modal({
   searchHandler,
 }) {
   const [inputType, setInputType] = useState("");
+  const [numAdult, setNumAdult] = useState(0)
+  const [numChild, setNumChild] = useState(0)
 
   const LOCATION = "location";
   const NUM_GUEST = "num_guests";
@@ -22,20 +24,28 @@ function Modal({
   };
 
   const guestHandler = (e) => {
+    if (e.currentTarget.id === "") {
+      return
+    }
+
+    let isAdult = e.currentTarget.id === "adult" ? true : false; 
+
     switch (e.target.id) {
       case "+":
-        if (guests === "") {
-          setGuests(1);
+        if (isAdult) {
+          setNumAdult(numAdult + 1)
         } else {
-          setGuests(guests + 1);
+          setNumChild(numChild + 1)
         }
         break;
 
       case "-":
-        if (guests === 0 || guests === "") {
-          setGuests(0);
+        if (isAdult) {
+          let total = numAdult - 1
+          setNumAdult(total > 0 ? total : 0);
         } else {
-          setGuests(guests - 1);
+          let total = numChild - 1;
+          setNumChild(total > 0 ? total : 0);
         }
         break;
 
@@ -54,6 +64,10 @@ function Modal({
     searchHandler()
     toggleModal();
   }
+
+  useEffect(() => {
+    setGuests(numAdult + numChild);
+  }, [numAdult, numChild, setGuests]);
 
   return (
     <div className="modal bg-secondary" onClick={toggleModal}>
@@ -128,11 +142,11 @@ function Modal({
               <div>
                 <h3 className="bd-700">Adults</h3>
                 <h3 className="bd-400 light">Ages 13 or above</h3>
-                <div className="guests__btn" onClick={guestHandler}>
+                <div id="adult" className="guests__btn" onClick={guestHandler}>
                   <button id="-" className="secondary">
                     -
                   </button>
-                  <h3 className="bd-700 secondary txt-center">0</h3>
+                  <h3 className="bd-700 secondary txt-center">{numAdult}</h3>
                   <button id="+" className="secondary">
                     +
                   </button>
@@ -142,11 +156,11 @@ function Modal({
               <div>
                 <h3 className="bd-700">Children</h3>
                 <h3 className="bd-400 light">Ages 2 - 12</h3>
-                <div className="guests__btn" onClick={guestHandler}>
+                <div id="child" className="guests__btn" onClick={guestHandler}>
                   <button id="-" className="secondary">
                     -
                   </button>
-                  <h3 className="bd-700 secondary txt-center">0</h3>
+                  <h3 className="bd-700 secondary txt-center">{numChild}</h3>
                   <button id="+" className="secondary">
                     +
                   </button>
