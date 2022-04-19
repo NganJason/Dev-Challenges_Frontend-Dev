@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 
 function Modal({
+  modalOn,
   toggleModal,
   guests,
   setGuests,
@@ -70,8 +71,14 @@ function Modal({
   }, [numAdult, numChild, setGuests]);
 
   return (
-    <div className="modal bg-secondary" onClick={toggleModal}>
-      <div className="modal__form bg-primary" onClick={stopPropagation}>
+    <div
+      className={`modal bg-secondary ${modalOn ? "show" : ""}`}
+      onClick={toggleModal}
+    >
+      <div
+        className={`modal__form bg-primary ${modalOn ? "show" : ""}`}
+        onClick={stopPropagation}
+      >
         <div className="box container">
           <div className="input border-right">
             <div id={LOCATION} className="input__field" onClick={setInput}>

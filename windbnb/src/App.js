@@ -40,19 +40,16 @@ function App() {
       </header>
       <main>
         <CardList data={stays} />
-        {modalOn ? (
-          <Modal
-            toggleModal={toggleModal}
-            setStays={setStays}
-            guests={guests}
-            location={location}
-            setGuests={setGuests}
-            setLocation={setLocation}
-            searchHandler={searchHandler}
-          />
-        ) : (
-          ""
-        )}
+        <Modal
+          modalOn={modalOn}
+          toggleModal={toggleModal}
+          setStays={setStays}
+          guests={guests}
+          location={location}
+          setGuests={setGuests}
+          setLocation={setLocation}
+          searchHandler={searchHandler}
+        />
       </main>
       <footer></footer>
     </div>
