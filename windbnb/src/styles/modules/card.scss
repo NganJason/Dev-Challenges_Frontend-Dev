@@ -56,7 +56,23 @@
 }
 
 @media only screen and (max-width: 1000px) {
+    .card {
+        padding: 0rem;
+    }
+    
     .card img {   
         height: 20rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .card img {   
+        height: 17rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .card img {   
+        height: 15rem;
     }
 }
