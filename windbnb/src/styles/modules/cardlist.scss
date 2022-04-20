@@ -11,18 +11,24 @@
     margin: 2rem 0;
 
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+@media only screen and (max-width: 1800px) {
+  .cardlist {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem 6rem;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .cardlist {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .cardlist {
     grid-template-columns: 1fr;
   }
-}
-
-@media only screen and (max-width: 1300px) {
-    .cardlist {
-        grid-gap: 2rem 2rem;
-    }
 }
