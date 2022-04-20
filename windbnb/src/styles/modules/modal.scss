@@ -162,6 +162,6 @@
     .modal__search-btn {
         position: absolute;
         bottom: 2rem;
-        left: 40%;
+        left: calc(50% - 4rem);
     }
 }
