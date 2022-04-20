@@ -51,7 +51,11 @@ function App() {
           searchHandler={searchHandler}
         />
       </main>
-      <footer></footer>
+      <footer>
+        <h3 className="bd-500 txt-center secondary">
+          created by <b>NganJason</b> - devChallenges.io
+        </h3>
+      </footer>
     </div>
   );
 }
