@@ -21,7 +21,7 @@ function Todo({ page, todo, ...props }) {
       <Text size="1.1" bd="500" strike={todo.done} primary>
         {todo.content}
       </Text>
-      <DeleteIcon className="material-icons" onClick={deleteHandler} disable={page !== "completed"}>
+      <DeleteIcon className="material-icons" onClick={deleteHandler}>
         delete_outline
       </DeleteIcon>
     </StyledTodo>
