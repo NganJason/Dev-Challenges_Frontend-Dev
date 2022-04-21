@@ -1,8 +1,12 @@
-import React from "react";
-import Todo from "../Todo/Todo";
-import { StyledTodoList } from "./style";
+import React, {useContext} from "react";
+import { TodosContext } from "../../hooks/toDosContext";
 
-function TodoList({ page, todos, toggleDone, deleteTodo }) {
+import { StyledTodoList } from "./style";
+import Todo from "../Todo/Todo";
+
+function TodoList({ page }) {
+  const {todos} = useContext(TodosContext);
+
   const genTodos = () => {
     let filteredTodos = [...todos];
 
@@ -14,19 +18,17 @@ function TodoList({ page, todos, toggleDone, deleteTodo }) {
       filteredTodos = filteredTodos.filter((todo) => !todo.done);
     }
 
-    return filteredTodos.map((todo, i) => {
+    return filteredTodos.map((todo) => {
       return (
         <Todo
-          key={i}
+          key={todo.id}
           page={page}
           todo={todo}
-          idx={i}
-          toggleDone={toggleDone}
-          deleteTodo={deleteTodo}
         />
       );
     });
   };
+
   return <StyledTodoList>{genTodos()}</StyledTodoList>;
 }
 
