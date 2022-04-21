@@ -1,8 +1,11 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import { TodosContext } from "../../hooks/toDosContext";
+
 import Button from "../Button";
 import { StyledForm, StyledInput } from "./style";
 
-function Input({addTodo}) {
+function Input() {
+  const { addTodo } = useContext(TodosContext);
   const [todo, setTodo] = useState("")
 
   const editTodo = (e) => {
@@ -14,7 +17,7 @@ function Input({addTodo}) {
       return
     }
     
-    addTodo({done:false, content:todo})
+    addTodo({done:false, content:todo, id:Date.now()})
     setTodo("")
   }
 

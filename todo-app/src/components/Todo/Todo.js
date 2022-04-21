@@ -1,14 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Text } from "../../globalStyles/typography";
 import { Checkbox, StyledTodo, DeleteIcon } from "./style";
 
-function Todo({ page, todo, idx, toggleDone, deleteTodo, ...props }) {
+import { TodosContext } from "../../hooks/toDosContext";
+
+function Todo({ page, todo, ...props }) {
+  const { toggleDone, deleteTodo } = useContext(TodosContext);
+
   const toggleCheckbox = () => {
-    toggleDone(idx);
+    toggleDone(todo.id);
   }
 
   const deleteHandler = () => {
-    deleteTodo(idx)
+    deleteTodo(todo.id)
   }
 
   return (
