@@ -1,16 +1,36 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { Text } from "../../globalStyles/typography";
+import { NavItem, StyledNav } from "./style";
 
-import { StyledTitle } from "./style";
+function Nav({setPage, page}) {    
+  const togglePage = (e) => {
+    let clickedNav = e.target.textContent
+    if (clickedNav === "") {
+      return
+    }
 
-function Title() {    
+    setPage(clickedNav.toLowerCase())
+  }
+
   return (
-    <StyledTitle>
-      <Text size="2.5" bd="700" center Raleway primary>
-        #todo
-      </Text>
-    </StyledTitle>
+    <StyledNav onClick={togglePage}>
+      <NavItem active={page === "all"}>
+        <Text size="0.9" bd="600" center primary>
+          All
+        </Text>
+      </NavItem>
+      <NavItem active={page === "active"}>
+        <Text size="0.9" bd="600" center primary>
+          Active
+        </Text>
+      </NavItem>
+      <NavItem active={page === "completed"}>
+        <Text size="0.9" bd="600" center primary>
+          Completed
+        </Text>
+      </NavItem>
+    </StyledNav>
   );
 }
 
-export default Title;
+export default Nav;

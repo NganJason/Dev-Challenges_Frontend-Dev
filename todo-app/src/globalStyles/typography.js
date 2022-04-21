@@ -23,4 +23,6 @@ export const Text = styled.p`
       return props.theme.text.primary;
     }
   }};
+
+  text-decoration: ${props => (props.strike ? "line-through" : "")};
 `;

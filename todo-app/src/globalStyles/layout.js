@@ -6,6 +6,8 @@ export const Body = styled.div`
   display: flex;
   flex-direction: column;
 
+  position: relative;
+
   background-color: ${(props) => props.theme.background.global};
 `;
 
