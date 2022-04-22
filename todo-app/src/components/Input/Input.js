@@ -6,25 +6,31 @@ import { StyledForm, StyledInput } from "./style";
 
 function Input() {
   const { addTodo } = useContext(TodosContext);
-  const [todo, setTodo] = useState("")
+  const [input, setInput] = useState("")
 
-  const editTodo = (e) => {
-    setTodo(e.target.value)
+  const editInput = (e) => {
+    setInput(e.target.value)
   }
 
   const submitTodo = () => {
-    if (todo === "") {
-      return
+    if (input === "") {
+      return;
     }
     
-    addTodo({done:false, content:todo, id:Date.now()})
-    setTodo("")
+    addTodo({ done: false, content: input, id: Date.now() });
+    setInput("");
   }
 
   return (
     <StyledForm>
-      <StyledInput placeholder="Add details" value={todo} onChange={editTodo}></StyledInput>
-      <Button w="6" h="3.5" onClick={submitTodo}>Add</Button>
+      <StyledInput
+        placeholder="Add details"
+        value={input}
+        onChange={editInput}
+      ></StyledInput>
+      <Button w="6" h="3.5" onClick={submitTodo}>
+        Add
+      </Button>
     </StyledForm>
   );
   
