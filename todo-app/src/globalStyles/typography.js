@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const Text = styled.p`
+  margin-top: ${(props) => (props.mgtop ? props.mgtop : 0)}rem;
+  
   font-family: ${(props) => (props.Raleway ? "Raleway" : "Montserrat")},
     sans-serif;
-  line-height: 1.25rem;
+  line-height: ${(props) => props.size}rem;
 
   font-size: ${(props) => props.size}rem;
   font-weight: ${(props) => props.bd};
@@ -24,5 +26,5 @@ export const Text = styled.p`
     }
   }};
 
-  text-decoration: ${props => (props.strike ? "line-through" : "")};
+  text-decoration: ${(props) => (props.strike ? "line-through" : "")};
 `;

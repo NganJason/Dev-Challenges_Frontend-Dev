@@ -3,11 +3,11 @@ import { lightTheme, darkTheme } from "./globalStyles/theme";
 
 import { BaseStyles } from "./globalStyles/base";
 import { Body, Header } from "./globalStyles/layout"
-import { Text } from "./globalStyles/typography"
 import Nav from "./components/Nav/Nav";
 import Input from "./components/Input/Input";
 import TodoList from "./components/TodoList/TodoList";
 import ThemeToggler from "./components/ThemeToggler/ThemeToggler";
+import Title from "./components/Title/Title";
 
 import { ThemeProvider } from "styled-components";
 import { TodosProvider } from "./hooks/toDosContext"
@@ -30,9 +30,7 @@ function App() {
           <BaseStyles />
           <ThemeToggler theme={theme} toggleTheme={toggleTheme} />
           <Header>
-            <Text size="2.5" bd="700" center Raleway primary>
-              #todo
-            </Text>
+            <Title/>
           </Header>
           <main>
             <Nav setPage={setPage} page={page} />
