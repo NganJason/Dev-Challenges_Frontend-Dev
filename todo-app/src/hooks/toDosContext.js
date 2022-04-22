@@ -11,6 +11,10 @@ export function TodosProvider({children}) {
         setTodos([...todosHandler.addTodo(todo)])
     };
 
+    const editContent = (id, content) => {
+        setTodos([...todosHandler.editContent(id, content)]);
+    }
+
     const toggleDone = (id) => {
         setTodos([...todosHandler.toggleDone(id)])
     };
@@ -19,7 +23,7 @@ export function TodosProvider({children}) {
         setTodos([...todosHandler.deleteTodo(id)])
     };
 
-    const value = {todos, addTodo, toggleDone, deleteTodo}
+    const value = { todos, addTodo, toggleDone, deleteTodo, editContent };
 
     return (
         <TodosContext.Provider value={value}>

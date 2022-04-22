@@ -24,10 +24,22 @@ class Todos {
         return this.todos;
     }
 
+    editContent(id, content) {
+        let idx = this.getIdxById(id)
+        if (idx === null) {
+            return this.todos;
+        }
+
+        this.todos[idx].content = content;
+        this.todosDM.save(this.todos)
+        
+        return this.todos
+    }
+
     toggleDone(id) {
         let idx = this.getIdxById(id);
         if (idx === null) {
-            return;
+            return this.todos;
         }
 
         this.todos[idx].done = !this.todos[idx].done; 
@@ -39,7 +51,7 @@ class Todos {
     deleteTodo(id) {
         let idx = this.getIdxById(id);
         if (idx === null) {
-        return;
+        return this.todos;
         }
 
         this.todos.splice(idx, 1);

@@ -41,3 +41,23 @@ export const StyledTodo = styled.div`
     opacity: 100;
   }
 `;
+
+export const StyledContent = styled.input`
+  font-family: ${(props) => (props.Raleway ? "Raleway" : "Montserrat")},
+    sans-serif;
+  font-size: ${(props) => props.size}rem;
+  font-weight: ${(props) => props.bd};
+  text-decoration: ${(props) => (props.strike ? "line-through" : "")};
+
+  background-color: inherit;
+  color: ${(props) => {
+    if (props.primary) {
+      return props.theme.text.primary;
+    }
+  }};
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+`;
