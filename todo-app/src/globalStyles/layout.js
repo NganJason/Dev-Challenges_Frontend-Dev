@@ -13,6 +13,5 @@ export const Body = styled.div`
 
 export const Header = styled.div`
   display: flex;
-  min-height: 3rem;
   padding: 3rem;
 `;
