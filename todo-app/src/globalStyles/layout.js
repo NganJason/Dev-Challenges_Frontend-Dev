@@ -9,6 +9,8 @@ export const Body = styled.div`
   position: relative;
 
   background-color: ${(props) => props.theme.background.global};
+  overflow: auto;
+  padding-bottom: 4rem;
 `;
 
 export const Header = styled.div`
