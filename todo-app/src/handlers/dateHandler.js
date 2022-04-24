@@ -10,16 +10,11 @@ export const initDateHandler = () => {
 class DateHandler {
     constructor(dateDM) {
         this.dateDM = dateDM
-        this.timeObj = new Date()
         this.dateObj = this.getDefaultDate()
     }
 
     getDate() {
         return this.dateObj;
-    }
-
-    getTime() {
-        return this.timeObj
     }
 
     addDay(day) {
@@ -37,7 +32,7 @@ class DateHandler {
             console.log(storedD.length);
             d = new Date(storedD);
         }
-        console.log(d);
+
         return d
     }
 }
