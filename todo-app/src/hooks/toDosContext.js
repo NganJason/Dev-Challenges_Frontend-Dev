@@ -8,11 +8,11 @@ const todosHandler = initTodosHandler()
 export function TodosProvider({children}) {
     const [todos, setTodos] = useState([])
     const [listId, setListId] = useState()
-    const { date } = useContext(DateContext);
+    const { dateObj } = useContext(DateContext);
 
     useEffect(() => {
-        setListId(date.getTime())
-    }, [date])
+      setListId(dateObj.getTime());
+    }, [dateObj]);
 
     useEffect(() => {
         setTodos(todosHandler.getTodos(listId))
