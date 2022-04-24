@@ -9,61 +9,96 @@ export const initTodosHandler = () => {
 
 class Todos {
     constructor(todosDM) {
-        this.todos = todosDM.get();
         this.todosDM = todosDM;
+        this.todos = this.getDefaultTodos();
     }
 
-    getTodos() {
-        return this.todos
-    }
-
-    addTodo(todo) {
-        this.todos.push(todo);
-        this.todosDM.save(this.todos);
-
-        return this.todos;
-    }
-
-    editContent(id, content) {
-        let idx = this.getIdxById(id)
-        if (idx === null) {
-            return this.todos;
+    getDefaultTodos() {
+        let defaultTodos = this.todosDM.get();
+        if (defaultTodos === undefined) {
+          return {};
         }
 
-        this.todos[idx].content = content;
-        this.todosDM.save(this.todos)
+        return defaultTodos;
+    }
+
+    getTodos(listId) {
+        if (!(listId in this.todos)) {
+            return []
+        }
+
+        return this.todos[listId]
+    }
+
+    addTodo(listId, todo) {
+        if (!(listId in this.todos)) {
+            this.todos[listId] = []
+        }
+
+        let todos = this.todos[listId]
+        todos.push(todo);
+
+        this.todosDM.save(this.todos);
+
+        return todos;
+    }
+
+    editContent(listId, taskId, content) {
+        if (!(listId in this.todos)) {
+            return []
+        }
+
+        let todos = this.todos[listId]
+        let idx = this.getIdxById(todos, taskId);
+        if (idx === null) {
+            return todos;
+        }
+
+        todos[idx].content = content;
+        this.todosDM.save(this.todos);
         
-        return this.todos
+        return todos;
     }
 
-    toggleDone(id) {
-        let idx = this.getIdxById(id);
-        if (idx === null) {
-            return this.todos;
+    toggleDone(listId, taskId) {
+        if (!(listId in this.todos)) {
+          return [];
         }
 
-        this.todos[idx].done = !this.todos[idx].done; 
+        let todos = this.todos[listId];
+        let idx = this.getIdxById(todos, taskId);
+        if (idx === null) {
+            return todos;
+        }
+
+        todos[idx].done = !todos[idx].done; 
         this.todosDM.save(this.todos);
 
-        return this.todos
+        return todos
     }
 
-    deleteTodo(id) {
-        let idx = this.getIdxById(id);
-        if (idx === null) {
-        return this.todos;
+    deleteTodo(listId, taskId) {
+        if (!(listId in this.todos)) {
+          return [];
         }
 
-        this.todos.splice(idx, 1);
+        let todos = this.todos[listId];
+        let idx = this.getIdxById(todos, taskId);
+
+        if (idx === null) {
+        return todos;
+        }
+
+        todos.splice(idx, 1);
         this.todosDM.save(this.todos);
 
-        return this.todos
+        return todos
     };
 
-    getIdxById(id) {
-        for (let i = 0; i < this.todos.length; i++) {
-            if (this.todos[i].id === id) {
-            return i;
+    getIdxById(todos, taskId) {
+        for (let i = 0; i < todos.length; i++) {
+            if (todos[i].id === taskId) {
+              return i;
             }
         }
 
