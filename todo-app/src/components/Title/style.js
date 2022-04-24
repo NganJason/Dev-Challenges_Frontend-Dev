@@ -11,8 +11,37 @@ const fadein = keyframes`
   }
 `;
 
+export const Arrow = styled.span`
+  opacity: 0;
+  color: ${(props) => {
+    if (props.primary) {
+      return props.theme.text.primary;
+    }
+  }};
+
+  width: 2rem;
+`;
+
 export const StyledTitle = styled.div`
-    display: flex;
-    flex-direction: column;
-    animation: ${fadein} 0.7s ease-in;
+  width: auto;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  animation: ${fadein} 0.7s ease-in;
 `
+
+export const DateSelection = styled.div`
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+
+  &:hover ${Arrow} {
+    opacity: 100;
+
+    animation: ${fadein} 0.2s ease-in;
+  }
+`;
