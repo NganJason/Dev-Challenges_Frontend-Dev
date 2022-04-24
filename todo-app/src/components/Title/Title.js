@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { Text } from "../../globalStyles/typography";
-import { StyledTitle } from "./style"
+import { StyledTitle, Arrow, DateSelection } from "./style";
+import { DateContext } from "../../hooks/dateContext";
 
 const months = [
   "Jan",
@@ -17,42 +18,47 @@ const months = [
   "Dec",
 ];
 
-const getDateTime = () => {
-  return {
-    date: getDate(),
-    time: getTime(),
-  };
-};
-
-const getDate = () => {
-  let d = new Date();
+const formatDate = (d) => {
   return `${d.getDate()} ${months[d.getMonth()]}`;
 };
 
-const getTime = () => {
-  let d = new Date();
-  let minutes = String(d.getMinutes()).padStart(2, 0);
+const formatTime = (t) => {
+  let minutes = String(t.getMinutes()).padStart(2, 0);
 
-  return `${d.getHours()}:${minutes}`;
-};
+  return `${t.getHours()}:${minutes}`;
+}
 
 function Title() {
-    const [dateTime, setDateTime] = useState(getDateTime())
-
-    useEffect(() => {
-      setInterval(()=> {
-        setDateTime(getDateTime())
-      }, 1)
-    }, [])
+  const { date, time, addDate } = useContext(DateContext);
 
   return (
     <StyledTitle>
       <Text size="6" bd="600" center primary>
-        {dateTime.time}
+        {formatTime(time)}
       </Text>
-      <Text size="1" bd="600" mgtop="1" center primary>
-        {dateTime.date}
-      </Text>
+      <DateSelection>
+        <Arrow
+          className="material-icons"
+          primary
+          onClick={() => {
+            addDate(-1);
+          }}
+        >
+          chevron_left
+        </Arrow>
+        <Text size="1" bd="600" center primary>
+          {formatDate(date)}
+        </Text>
+        <Arrow
+          className="material-icons"
+          primary
+          onClick={() => {
+            addDate(1);
+          }}
+        >
+          chevron_right
+        </Arrow>
+      </DateSelection>
     </StyledTitle>
   );
 }

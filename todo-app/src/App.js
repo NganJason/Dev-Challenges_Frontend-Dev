@@ -11,6 +11,7 @@ import Title from "./components/Title/Title";
 
 import { ThemeProvider } from "styled-components";
 import { TodosProvider } from "./hooks/toDosContext"
+import { DateProvider } from "./hooks/dateContext";
 import { initThemeHandler } from "./handlers/themeHandler";
 
 const themeHandler = initThemeHandler()
@@ -25,22 +26,22 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
-      <TodosProvider>
-        <Body>
-          <BaseStyles />
-          <ThemeToggler theme={theme} toggleTheme={toggleTheme} />
-          <Header>
-            <Title/>
-          </Header>
-          <main>
-            <Nav setPage={setPage} page={page} />
-            {page !== "completed" && <Input />}
-            <TodoList
-              page={page}
-            />
-          </main>
-        </Body>
-      </TodosProvider>
+      <DateProvider>
+        <TodosProvider>
+          <Body>
+            <BaseStyles />
+            <ThemeToggler theme={theme} toggleTheme={toggleTheme} />
+            <Header>
+              <Title />
+            </Header>
+            <main>
+              <Nav setPage={setPage} page={page} />
+              {page !== "completed" && <Input />}
+              <TodoList page={page} />
+            </main>
+          </Body>
+        </TodosProvider>
+      </DateProvider>
     </ThemeProvider>
   );
 }
