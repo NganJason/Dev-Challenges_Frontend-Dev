@@ -1,26 +1,37 @@
-import React, {useState} from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { initTodosHandler } from "../handlers/todosHandler";
+import { DateContext } from "./dateContext";
 
 export const TodosContext = React.createContext()
 const todosHandler = initTodosHandler()
 
 export function TodosProvider({children}) {
-    const [todos, setTodos] = useState(todosHandler.getTodos())
+    const [todos, setTodos] = useState([])
+    const [listId, setListId] = useState()
+    const { date } = useContext(DateContext);
+
+    useEffect(() => {
+        setListId(date.getTime())
+    }, [date])
+
+    useEffect(() => {
+        setTodos(todosHandler.getTodos(listId))
+    }, [listId])
 
     const addTodo = (todo) => {
-        setTodos([...todosHandler.addTodo(todo)])
+        setTodos([...todosHandler.addTodo(listId, todo)])
     };
 
-    const editContent = (id, content) => {
-        setTodos([...todosHandler.editContent(id, content)]);
+    const editContent = (taskId, content) => {
+        setTodos([...todosHandler.editContent(listId, taskId, content)]);
     }
 
-    const toggleDone = (id) => {
-        setTodos([...todosHandler.toggleDone(id)])
+    const toggleDone = (taskId) => {
+        setTodos([...todosHandler.toggleDone(listId, taskId)])
     };
 
-    const deleteTodo = (id) => {
-        setTodos([...todosHandler.deleteTodo(id)])
+    const deleteTodo = (taskId) => {
+      setTodos([...todosHandler.deleteTodo(listId, taskId)]);
     };
 
     const value = { todos, addTodo, toggleDone, deleteTodo, editContent };

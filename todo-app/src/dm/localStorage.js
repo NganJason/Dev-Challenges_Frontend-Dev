@@ -10,7 +10,7 @@ export class localStorageDM {
   get() {
     let data = localStorage.getItem(this.key);
     if (data === undefined || data === null) {
-      return [];
+      return undefined;
     }
 
     return JSON.parse(data);
