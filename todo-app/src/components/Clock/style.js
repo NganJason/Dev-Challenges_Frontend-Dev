@@ -21,17 +21,6 @@ export const Arrow = styled.span`
   width: 2rem;
 `;
 
-export const StyledTitle = styled.div`
-  width: auto;
-  margin: auto;
-
-  display: flex;
-  flex-direction: column;
-
-  cursor: pointer;
-  animation: ${fadein} 0.7s ease-in;
-`;
-
 export const DateSelection = styled.div`
   margin-top: 1rem;
 
