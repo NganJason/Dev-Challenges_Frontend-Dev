@@ -29,7 +29,6 @@ class DateHandler {
         let d = new Date()
         
         if (storedD !== undefined && storedD !== null && storedD.length !== 0) {
-            console.log(storedD.length);
             d = new Date(storedD);
         }
 
