@@ -8,19 +8,22 @@ function Text({
   mgBtm,
   mgLeft,
   mgRight,
+  inline,
   children
 }) {
   const styles = {
     textAlign: `${align ? align : "left"}`,
     fontSize: `${size ? `${size}rem` : "1rem"}`,
-    marginTop: `${mgTop ? `${mgTop}rem` : "0"}`,
-    marginBottom: `${mgBtm ? `${mgBtm}rem` : "0"}`,
-    marginLeft: `${mgLeft ? `${mgLeft}rem` : "0"}`,
-    marginRight: `${mgRight ? `${mgRight}rem` : "0"}`,
+    marginTop: `${mgTop ? `${mgTop}rem` : ""}`,
+    marginBottom: `${mgBtm ? `${mgBtm}rem` : ""}`,
+    marginLeft: `${mgLeft ? `${mgLeft}rem` : ""}`,
+    marginRight: `${mgRight ? `${mgRight}rem` : ""}`,
   };
 
   const classNames = `
-  text ${color ? color : "primary"}
+  text 
+  ${color ? color : "primary"}
+  ${inline ? "inline" : ""}
 `;
 
   return (

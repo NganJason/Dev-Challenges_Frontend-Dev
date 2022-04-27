@@ -2,5 +2,14 @@
 
 * {
     font-family: 'Raleway', sans-serif;
-    line-height: 2rem;
+    line-height: auto;
+}
+
+.text {
+    display: block;
+    width: auto;
+
+    &.inline {
+        display: inline;
+    }
 }
