@@ -1,0 +1,17 @@
+.highlights {
+    margin-top: 4.5rem;
+}
+
+.highlights__cardlist {
+    margin-top: 2rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .highlights__cardlist {
+    grid-template-columns: 1fr;
+  }
+}

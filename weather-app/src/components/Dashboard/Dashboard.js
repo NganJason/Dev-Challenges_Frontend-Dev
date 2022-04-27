@@ -1,5 +1,6 @@
 import React from "react"
 import Button from "../Button/Button";
+import Highlights from "../Highlights/Highlights";
 import Weathers from "../Weathers/Weathers";
 
 function Dashboard() {
@@ -17,6 +18,7 @@ function Dashboard() {
         </div>
 
         <Weathers/>
+        <Highlights/>
       </div>
     );
 }

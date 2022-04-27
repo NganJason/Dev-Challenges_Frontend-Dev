@@ -11,6 +11,7 @@ function Button({
     mgRight,
     round,
     active,
+    inline,
     children
 }) {
     const styles = {
@@ -28,6 +29,7 @@ function Button({
         ${size ? `btn_${size}` : "btn_md"}
         ${round ? "btn_round" : ""}
         ${active ? "btn_active" : ""}
+        ${inline ? "btn_inline" : ""}
     `;
 
     return (

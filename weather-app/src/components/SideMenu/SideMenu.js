@@ -29,7 +29,7 @@ function SideMenu() {
             <span>&#8451;</span>
           </Text>
         </Text>
-        <Text size="2.3rem" mgTop={3.5} align="center" color="secondary">
+        <Text size="2.3rem" bd="600" mgTop={3.5} align="center" color="secondary">
           Shower
         </Text>
       </div>
@@ -44,7 +44,7 @@ function SideMenu() {
         </div>
 
         <div className="footer__location">
-          <Text align="center" color="secondary">
+          <Text align="center" bd="600" color="secondary">
             Helsinki
           </Text>
         </div>
