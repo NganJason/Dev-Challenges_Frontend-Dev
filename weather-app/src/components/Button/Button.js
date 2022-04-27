@@ -7,12 +7,17 @@ function Button({
     size, 
     mgTop, 
     mgBtm,
+    mgLeft,
+    mgRight,
     round,
+    active,
     children
 }) {
     const styles = {
-        marginTop: `${mgTop ? `${mgTop}rem` : "0"}`,
-        marginBottom: `${mgBtm ? `${mgBtm}rem` : "0"}`
+      marginTop: `${mgTop ? `${mgTop}rem` : ""}`,
+      marginBottom: `${mgBtm ? `${mgBtm}rem` : ""}`,
+      marginLeft: `${mgLeft ? `${mgLeft}rem` : ""}`,
+      marginRight: `${mgRight ? `${mgRight}rem` : ""}`,
     };
 
     const classNames = `
@@ -22,6 +27,7 @@ function Button({
         ${txtAlign ? `txt_${txtAlign}` : "txt_center"}
         ${size ? `btn_${size}` : "btn_md"}
         ${round ? "btn_round" : ""}
+        ${active ? "btn_active" : ""}
     `;
 
     return (

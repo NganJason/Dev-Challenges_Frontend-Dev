@@ -1,5 +1,6 @@
 .App {
-    height: 100%;
+    height: auto;
+    min-height: 100%;
 
     display: flex;
 
@@ -9,4 +10,10 @@
     scroll-behavior: smooth;
 
     background-color: green;
+}
+
+@media only screen and (max-width: 1000px) {
+  .App {
+    flex-direction: column;
+  }
 }
