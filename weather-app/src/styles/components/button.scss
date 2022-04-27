@@ -49,6 +49,10 @@
         width: 10rem;
     }
 
+    &_inline {
+        display: inline;
+    }
+
     &.btn_round {
         border-radius: 100%;
     }

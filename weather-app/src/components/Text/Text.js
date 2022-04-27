@@ -8,6 +8,7 @@ function Text({
   mgBtm,
   mgLeft,
   mgRight,
+  bd,
   inline,
   children,
   ...props
@@ -15,6 +16,7 @@ function Text({
   const styles = {
     textAlign: `${align ? align : "left"}`,
     fontSize: `${size ? `${size}` : "1rem"}`,
+    fontWeight: `${bd ? `${bd}` : "500"}`,
     marginTop: `${mgTop ? `${mgTop}rem` : ""}`,
     marginBottom: `${mgBtm ? `${mgBtm}rem` : ""}`,
     marginLeft: `${mgLeft ? `${mgLeft}rem` : ""}`,
