@@ -4,7 +4,7 @@ import Text from "../Text/Text";
 function HighlightCard({title, value, unit, children}) {
   return (
     <div className="card bg-secondary">
-      <Text size="16px" primary>
+      <Text size="20px" primary>
         {title}
       </Text>
       <Text size="64px" bd="700" mgTop="1.5" primary>

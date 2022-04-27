@@ -1,6 +1,7 @@
 import React from "react";
 import Text from "../Text/Text"
 import HighlightCard from "../HighlightCard/HighlightCard";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 function Highlights() {
   return (
@@ -18,17 +19,19 @@ function Highlights() {
           </Text>
         </HighlightCard>
 
-        <HighlightCard title="Humidity" value="84" unit="%"></HighlightCard>
+        <HighlightCard title="Humidity" value="84" unit="%">
+          <ProgressBar width="70%" progress="40" mgTop="1"/>
+        </HighlightCard>
         <HighlightCard
           title="Visibility"
           value="6.4"
           unit="miles"
-        ></HighlightCard>
+        />
         <HighlightCard
           title="Air Pressure"
           value="998"
           unit="mb"
-        ></HighlightCard>
+        />
       </div>
     </div>
   );
