@@ -1,0 +1,39 @@
+.weather-card {
+    width: 100%;
+    height: 12rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .card__img {
+        height: 5rem;
+        width: 5rem;
+
+        object-fit: contain;
+    }
+
+    .card__temp {
+        display: flex;
+        justify-content: center;
+    }
+
+    .temp__digit {
+        font-size: 1600px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+  .weather-card {
+    height: 15rem;
+    margin-top: 0.5rem;
+    padding: 2rem 1rem;
+
+    .card__img {
+        height: 9rem;
+        width: 9rem;
+    }
+  }
+}

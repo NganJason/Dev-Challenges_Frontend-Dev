@@ -13,23 +13,23 @@ function SideMenu() {
         </Button>
 
         <Button size="sm" align="right" round>
-          <span class="material-icons">my_location</span>
+          <span class="material-icons md-18">my_location</span>
         </Button>
       </div>
 
-      <div className="side-menu__logo">
-        <img className="logo__background" src={cloudBackground} />
-        <img className="logo" src={shower} />
+      <div className="side-menu__img">
+        <img className="img__background" src={cloudBackground} />
+        <img className="img" src={shower} />
       </div>
 
       <div className="side-menu__content">
-        <Text size={7} align="center">
+        <Text size="7rem" align="center">
           15
-          <Text size={4} mgLeft={1} inline color="secondary">
+          <Text size="4rem" mgLeft={1} inline color="secondary">
             <span>&#8451;</span>
           </Text>
         </Text>
-        <Text size={2.3} mgTop={3.5} align="center" color="secondary">
+        <Text size="2.3rem" mgTop={3.5} align="center" color="secondary">
           Shower
         </Text>
       </div>

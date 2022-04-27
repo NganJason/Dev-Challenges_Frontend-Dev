@@ -9,11 +9,12 @@ function Text({
   mgLeft,
   mgRight,
   inline,
-  children
+  children,
+  ...props
 }) {
   const styles = {
     textAlign: `${align ? align : "left"}`,
-    fontSize: `${size ? `${size}rem` : "1rem"}`,
+    fontSize: `${size ? `${size}` : "1rem"}`,
     marginTop: `${mgTop ? `${mgTop}rem` : ""}`,
     marginBottom: `${mgBtm ? `${mgBtm}rem` : ""}`,
     marginLeft: `${mgLeft ? `${mgLeft}rem` : ""}`,

@@ -3,7 +3,11 @@
 @import './layout.scss';
 @import './typography.scss';
 @import './theme.scss';
+@import './state.scss';
 
 // Modules
 @import './components/sidemenu.scss';
 @import './components/button.scss';
+@import './components/dashboard.scss';
+@import './components/weathers.scss';
+@import './components/weatherCard.scss';
