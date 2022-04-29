@@ -12,6 +12,8 @@ function Button({
     round,
     active,
     inline,
+    height,
+    width,
     children
 }) {
     const styles = {
@@ -19,6 +21,8 @@ function Button({
       marginBottom: `${mgBtm ? `${mgBtm}rem` : ""}`,
       marginLeft: `${mgLeft ? `${mgLeft}rem` : ""}`,
       marginRight: `${mgRight ? `${mgRight}rem` : ""}`,
+      height: `${height ? height : ""}`,
+      width: `${width ? width : ""}`,
     };
 
     const classNames = `

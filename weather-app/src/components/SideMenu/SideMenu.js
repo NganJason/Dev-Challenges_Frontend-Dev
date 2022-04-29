@@ -3,10 +3,12 @@ import Text from "../Text/Text";
 
 import cloudBackground from "../../images/Cloud-background.png"
 import shower from "../../images/Shower.png"
+import SearchModal from "../SearchModal/SearchModal";
 
 function SideMenu() {
   return (
     <div className="side-menu bg-secondary">
+      <SearchModal />
       <div className="side-menu__title">
         <Button size="lg" align="left">
           Search for places
@@ -29,7 +31,13 @@ function SideMenu() {
             <span>&#8451;</span>
           </Text>
         </Text>
-        <Text size="2.3rem" bd="600" mgTop={3.5} align="center" color="secondary">
+        <Text
+          size="2.3rem"
+          bd="600"
+          mgTop={3.5}
+          align="center"
+          color="secondary"
+        >
           Shower
         </Text>
       </div>

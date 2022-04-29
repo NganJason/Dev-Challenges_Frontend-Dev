@@ -20,13 +20,15 @@ function Highlights() {
         </HighlightCard>
 
         <HighlightCard title="Humidity" value="84" unit="%">
-          <ProgressBar width="70%" progress="40" mgTop="1"/>
+          <ProgressBar width="70%" progress="84" mgTop="1"/>
         </HighlightCard>
+
         <HighlightCard
           title="Visibility"
           value="6.4"
           unit="miles"
         />
+
         <HighlightCard
           title="Air Pressure"
           value="998"
