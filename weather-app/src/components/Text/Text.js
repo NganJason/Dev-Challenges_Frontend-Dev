@@ -10,6 +10,8 @@ function Text({
   mgRight,
   bd,
   inline,
+  hover,
+  cursor,
   children,
   ...props
 }) {
@@ -27,6 +29,8 @@ function Text({
   text 
   ${color ? color : "primary"}
   ${inline ? "inline" : ""}
+  ${hover ? "text_hover" : ""}
+  ${cursor ? "text_cursor" : ""}
 `;
 
   return (

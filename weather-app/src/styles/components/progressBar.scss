@@ -1,0 +1,21 @@
+.progress-bar {
+    width: 200px;
+}
+
+.bar-value {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar {
+    padding: 3px;
+
+    background-color: #E7E7EB;
+    border-radius: 13px;
+}
+
+.progress {
+    
+    background-color: orange;
+    border-radius: 10px;
+}
