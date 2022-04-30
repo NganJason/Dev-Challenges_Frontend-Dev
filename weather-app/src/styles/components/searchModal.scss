@@ -9,6 +9,16 @@
     z-index: 10;
 }
 
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+
 .search-modal.disabled {
     display: none;
 }
@@ -56,4 +66,14 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
+}
+
+@keyframes slide-in {
+    0% { transform: translateX(-100%)}
+    100% { transform: translateX(0%); }
+}
+
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
 }
