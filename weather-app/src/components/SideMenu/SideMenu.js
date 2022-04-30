@@ -1,3 +1,5 @@
+import React, {useState} from "react"
+
 import Button from "../Button/Button";
 import Text from "../Text/Text";
 
@@ -5,12 +7,13 @@ import cloudBackground from "../../images/Cloud-background.png"
 import shower from "../../images/Shower.png"
 import SearchModal from "../SearchModal/SearchModal";
 
-function SideMenu() {
+function SideMenu({modalDisabled, toggleModal}) {
+
   return (
     <div className="side-menu bg-secondary">
-      <SearchModal />
+      <SearchModal disabled={modalDisabled} toggleModal={toggleModal}/>
       <div className="side-menu__title">
-        <Button size="lg" align="left">
+        <Button size="lg" align="left" onClick={toggleModal}>
           Search for places
         </Button>
 

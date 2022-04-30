@@ -3,9 +3,9 @@ import Button from "../Button/Button";
 import Highlights from "../Highlights/Highlights";
 import Weathers from "../Weathers/Weathers";
 
-function Dashboard() {
+function Dashboard({closeModal}) {
     return (
-      <div className="dashboard">
+      <div className="dashboard" onClick={closeModal}>
         <div className="dashboard__header">
           <div></div>
           <Button size="sm" align="right" mgRight={1} round active>

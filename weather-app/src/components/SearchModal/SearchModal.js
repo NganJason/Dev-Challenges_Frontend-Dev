@@ -2,11 +2,13 @@ import React from "react"
 import Button from "../Button/Button"
 import Text from "../Text/Text"
 
-function SearchModal({disabled}) {
+function SearchModal({disabled, toggleModal}) {
   return (
-    <div className={`search-modal bg-secondary ${disabled ? "disabled" : ""}`}>
+    <div className={`search-modal bg-secondary ${disabled ? "slide-out" : "slide-in"}`}>
       <div className="modal__header">
-        <span class="material-icons secondary md-48">close</span>
+        <span class="material-icons secondary md-48" onClick={toggleModal}>
+          close
+        </span>
       </div>
 
       <div className="modal__input">

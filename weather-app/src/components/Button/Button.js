@@ -14,7 +14,8 @@ function Button({
     inline,
     height,
     width,
-    children
+    children,
+    ...props
 }) {
     const styles = {
       marginTop: `${mgTop ? `${mgTop}rem` : ""}`,
@@ -37,7 +38,7 @@ function Button({
     `;
 
     return (
-        <div className={classNames} style={styles}>
+        <div className={classNames} style={styles} {...props}>
             {children}
         </div>
     );
