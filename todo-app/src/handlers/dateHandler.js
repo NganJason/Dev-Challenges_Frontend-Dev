@@ -25,12 +25,7 @@ class DateHandler {
     }
 
     getDefaultDate() {
-        let  storedD = this.dateDM.get()
         let d = new Date()
-        
-        if (storedD !== undefined && storedD !== null && storedD.length !== 0) {
-            d = new Date(storedD);
-        }
 
         return d
     }
